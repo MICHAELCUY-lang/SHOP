@@ -74,12 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
             cartTotalElement.textContent = `Total: $${total.toFixed(2)}`;
         }
     }
-
-    // Remove item from cart
-    window.removeFromCart = function(index) {
-        cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        displayCartItems();
-        updateCartCount();
-    };
 });

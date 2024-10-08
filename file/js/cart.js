@@ -64,4 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname.includes('cart.html')) {
         displayCartItems();
     }
+  // Remove item from cart
+window.removeFromCart = function(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCartItems();
+    updateCartCount();
+};
+
 });
